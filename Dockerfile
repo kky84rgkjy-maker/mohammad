@@ -1,0 +1,10 @@
+FROM python:3.14-slim
+
+WORKDIR /app
+COPY . .
+
+ENV PYTHONUNBUFFERED=1
+ENV TOOL_NO_BROWSER=1
+
+EXPOSE 8700
+CMD ["python", "server.py"]
